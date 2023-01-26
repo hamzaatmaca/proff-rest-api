@@ -33,6 +33,9 @@ app.use(express.json());
 app.use(Auth);
 
 //ROUTES
+app.get("/", (req, res) => {
+  res.send("Welcome User Login-Register Rest - API");
+});
 app.use("/api/v1", router);
 
 app.listen(3030, () => {
